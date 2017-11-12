@@ -8,6 +8,40 @@ A little OAuth2 Wrapper for [Discord](https://discordapp.com).
 * Refreshing of Access-Token with Refresh-Token
 * Get guilds / user / connections information of user
 
+## How to add it
+Maven
+```
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+<dependency>
+  <groupId>com.github.HayateLaTech</groupId>
+  <artifactId>OAuth2Discord</artifactId>
+  <version>-SNAPSHOT</version>
+</dependency>
+```
+
+Gradle
+```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+dependencies {
+  compile 'com.github.User:Repo:Tag'
+}
+```
+[Jitpack](https://jitpack.io/#HayateLaTech/OAuth2Discord)
+
+Or build it locally..
+
 ## How does it work
 1. Instantiate the `OAuthBuilder` like this:
 ```java
