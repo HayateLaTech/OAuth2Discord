@@ -21,7 +21,7 @@ Maven
 <dependency>
   <groupId>com.github.HayateLaTech</groupId>
   <artifactId>OAuth2Discord</artifactId>
-  <version>-SNAPSHOT</version>
+  <version>3</version>
 </dependency>
 ```
 
