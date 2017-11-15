@@ -35,7 +35,7 @@ allprojects {
 }
 
 dependencies {
-  compile 'com.github.User:Repo:Tag'
+  compile 'com.github.HayateLaTech:OAuth2Discord:3'
 }
 ```
 [Jitpack](https://jitpack.io/#HayateLaTech/OAuth2Discord)
