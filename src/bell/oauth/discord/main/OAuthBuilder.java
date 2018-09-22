@@ -156,8 +156,8 @@ public class OAuthBuilder {
 			for (Object guild: arrJs) {
 				Guild g = new Guild();
 				JSONObject obj = (JSONObject) guild;
-				
-				g.setIcon(obj.getString("icon"));
+
+				g.setIcon(obj.isNull("icon") ? null : obj.getString("icon"));
 				g.setId(obj.getString("id"));
 				g.setName(obj.getString("name"));
 				g.setOwner(obj.getBoolean("owner"));
