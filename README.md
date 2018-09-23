@@ -35,7 +35,7 @@ allprojects {
 }
 
 dependencies {
-  compile 'com.github.HayateLaTech:OAuth2Discord:-SNAPSHOT'
+    implementation 'com.github.HayateLaTech:OAuth2Discord:-SNAPSHOT'
 }
 ```
 [Jitpack](https://jitpack.io/#HayateLaTech/OAuth2Discord)
