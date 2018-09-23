@@ -21,7 +21,7 @@ Maven
 <dependency>
   <groupId>com.github.HayateLaTech</groupId>
   <artifactId>OAuth2Discord</artifactId>
-  <version>1</version>
+  <version>-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -35,7 +35,7 @@ allprojects {
 }
 
 dependencies {
-  compile 'com.github.HayateLaTech:OAuth2Discord:1'
+  compile 'com.github.HayateLaTech:OAuth2Discord:-SNAPSHOT'
 }
 ```
 [Jitpack](https://jitpack.io/#HayateLaTech/OAuth2Discord)
