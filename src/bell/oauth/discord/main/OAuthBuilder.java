@@ -126,7 +126,7 @@ public class OAuthBuilder {
 				user.setAvatar(js.getString("avatar"));
 				user.setBot(js.getBoolean("bot"));
 				user.setDiscriminator(js.getString("discriminator"));
-				user.setEmail(js.getString("email"));
+				user.setEmail(js.has("email") ? js.getString("email") : null);
 				user.setMfa_enabled(js.getBoolean("mfa_enabled"));
 				user.setUsername(js.getString("username"));
 				user.setVerified(js.getBoolean("verified"));
@@ -134,7 +134,7 @@ public class OAuthBuilder {
 				user.setId(js.getString("id"));
 				user.setAvatar(js.getString("avatar"));
 				user.setDiscriminator(js.getString("discriminator"));
-				user.setEmail(js.getString("email"));
+				user.setEmail(js.has("email") ? js.getString("email") : null);
 				user.setUsername(js.getString("username"));
 			}			
 			
