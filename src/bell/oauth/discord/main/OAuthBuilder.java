@@ -123,7 +123,9 @@ public class OAuthBuilder {
 			JSONObject js = new JSONObject(json);
 			try {
 				user.setId(js.getString("id"));
-				user.setAvatar(js.getString("avatar"));
+				if (js.has("avatar")) {
+					user.setAvatar(js.getString("avatar"));
+				}
 				user.setBot(js.getBoolean("bot"));
 				user.setDiscriminator(js.getString("discriminator"));
 				user.setEmail(js.has("email") ? js.getString("email") : null);
