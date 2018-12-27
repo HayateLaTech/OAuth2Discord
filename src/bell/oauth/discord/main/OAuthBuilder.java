@@ -134,7 +134,9 @@ public class OAuthBuilder {
 				user.setVerified(js.getBoolean("verified"));
 			} catch (JSONException e) {
 				user.setId(js.getString("id"));
-				user.setAvatar(js.getString("avatar"));
+				if (js.has("avatar")) {
+					user.setAvatar(js.getString("avatar"));
+				}
 				user.setDiscriminator(js.getString("discriminator"));
 				user.setEmail(js.has("email") ? js.getString("email") : null);
 				user.setUsername(js.getString("username"));
