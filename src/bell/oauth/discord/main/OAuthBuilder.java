@@ -119,26 +119,24 @@ public class OAuthBuilder {
 		
 		try {
 			String json = Post.get(client, BASEURI + MEURI, access_token);
-			
-			JSONObject js = new JSONObject(json);
-			try {
-				user.setId(js.getString("id"));
-				if (js.has("avatar")) {
-					user.setAvatar(js.getString("avatar"));
-				}
-				user.setBot(js.getBoolean("bot"));
-				user.setDiscriminator(js.getString("discriminator"));
-				user.setEmail(js.has("email") ? js.getString("email") : null);
-				user.setMfa_enabled(js.getBoolean("mfa_enabled"));
-				user.setUsername(js.getString("username"));
-				user.setVerified(js.getBoolean("verified"));
-			} catch (JSONException e) {
-				user.setId(js.getString("id"));
-				user.setAvatar(js.getString("avatar"));
-				user.setDiscriminator(js.getString("discriminator"));
-				user.setEmail(js.has("email") ? js.getString("email") : null);
-				user.setUsername(js.getString("username"));
-			}			
+      
+      JSONObject js = new JSONObject(json);
+      try {
+        user.setId(js.getString("id"));
+        user.setAvatar(js.isNull("avatar") ? null : js.getString("avatar"));
+        user.setBot(js.getBoolean("bot"));
+        user.setDiscriminator(js.getString("discriminator"));
+        user.setEmail(js.has("email") ? js.getString("email") : null);
+        user.setMfa_enabled(js.getBoolean("mfa_enabled"));
+        user.setUsername(js.getString("username"));
+        user.setVerified(js.getBoolean("verified"));
+      } catch (JSONException e) {
+        user.setId(js.getString("id"));
+        user.setAvatar(js.isNull("avatar") ? null : js.getString("avatar"));
+        user.setDiscriminator(js.getString("discriminator"));
+        user.setEmail(js.has("email") ? js.getString("email") : null);
+        user.setUsername(js.getString("username"));
+      }
 			
 		} catch (IOException e) {
 			return null;
