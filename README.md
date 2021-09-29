@@ -1,5 +1,6 @@
 # OAuth2Discord
 A little OAuth2 Wrapper for [Discord](https://discord.com).
+
 Updated by ASL STUDIO
 
 ## Features
@@ -10,38 +11,7 @@ Updated by ASL STUDIO
 * Get guilds / user / connections information of user
 
 ## How to add it
-Maven
-```
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
 
-<dependency>
-  <groupId>com.github.HayateLaTech</groupId>
-  <artifactId>OAuth2Discord</artifactId>
-  <version>-SNAPSHOT</version>
-</dependency>
-```
-
-Gradle
-```
-allprojects {
-  repositories {
-    ...
-    maven { url 'https://jitpack.io' }
-  }
-}
-
-dependencies {
-    implementation 'com.github.HayateLaTech:OAuth2Discord:-SNAPSHOT'
-}
-```
-[Jitpack](https://jitpack.io/#HayateLaTech/OAuth2Discord)
-
-Or build it locally..
 
 ## How does it work
 1. Instantiate the `OAuthBuilder` like this:
