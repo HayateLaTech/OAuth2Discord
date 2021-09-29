@@ -1,5 +1,6 @@
 # OAuth2Discord
-A little OAuth2 Wrapper for [Discord](https://discordapp.com).
+A little OAuth2 Wrapper for [Discord](https://discord.com).
+Updated by ASL STUDIO
 
 ## Features
 * Generation of Authorization URI
@@ -44,41 +45,41 @@ Or build it locally..
 
 ## How does it work
 1. Instantiate the `OAuthBuilder` like this:
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 
 OAuthBuilder builder = new OAuthBuilder("clientID", "clientSecret")
-                          .setScopes(new String[]{"connections", "guilds", "email"})
-                          .setRedirectURI("RedirectURL");
+        .setScopes(new String[]{"connections", "guilds", "email"})
+        .setRedirectURI("RedirectURL");
 ```
 2. Get the Authorization URL:
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 
 String authURL = builder.getAuthorizationUrl(null);
 ```
 3. Exchange the Code you get from the redirect (as a GET parameter):
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.main.Response;
 
 Response response = builder.exchange(code);
 
-if (response == Response.ERROR) {
-  // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
-} else {
-  // EVERYTHING WORKED AS EXPECTED
-}
+        if (response == Response.ERROR) {
+        // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
+        } else {
+        // EVERYTHING WORKED AS EXPECTED
+        }
 ```
 * Get User-Information (only available with scopes `email` or `identify`):
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.domain.User;
 
 User user =  builder.getUser();
 ```
 * Get Guilds-Information (only available with scope `guilds`):
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.domain.Guild;
 import java.util.List;
@@ -86,7 +87,7 @@ import java.util.List;
 List<Guild> guilds = builder.getGuilds();
 ```
 * Get Connections-Information (only available with scope `connections`):
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.domain.Connection;
 import java.util.List;
@@ -94,31 +95,28 @@ import java.util.List;
 List<Connection> connections = builder.getConnections();
 ```
 * Refresh the access-token:
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.main.Response;
 
 Response response = builder.refresh();
 
-if (response == Response.ERROR) {
-  // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
-} else {
-  // EVERYTHING WORKED AS EXPECTED
-}
+        if (response == Response.ERROR) {
+        // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
+        } else {
+        // EVERYTHING WORKED AS EXPECTED
+        }
 ```
 * Revoke the access-token:
-```java
+```
 import bell.oauth.discord.main.OAuthBuilder;
 import bell.oauth.discord.main.Response;
 
 Response response = builder.revoke();
 
-if (response == Response.ERROR) {
-  // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
-} else {
-  // EVERYTHING WORKED AS EXPECTED
-}
+        if (response == Response.ERROR) {
+        // AN ERROR HAPPENED WHILE EXCHANGING THE CODE
+        } else {
+        // EVERYTHING WORKED AS EXPECTED
+        }
 ```
-
-## TODO
-* Invite workflow

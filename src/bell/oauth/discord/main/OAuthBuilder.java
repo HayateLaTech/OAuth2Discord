@@ -16,7 +16,7 @@ import okhttp3.OkHttpClient;
 
 public class OAuthBuilder {
 	
-	private static final String BASEURI = "https://discordapp.com/api/";
+	private static final String BASEURI = "https://discord.com/api/";
 	private static final String TOKENURI = "oauth2/token";
 	private static final String REVOCATIONURI = "oauth2/token/revoke";
 	

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Bell</groupId>
   <artifactId>OAuth2Discord</artifactId>
-  <version>SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
