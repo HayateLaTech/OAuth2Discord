@@ -17,7 +17,21 @@ Updated by ASL STUDIO
 * Get guilds / user / connections information of user
 
 ## How to add it
+![dependency maven](https://img.shields.io/badge/DEPENDENCY-Maven-C71A36?style=plastic&logo=apachemaven)
+```xml
+<dependencies>
+    <dependency>
+        <groupId>ru.aslcraft.bell.oauth.discord</groupId>
+        <artifactId>OAuth2Discord</artifactId>
+        <version>1.0</version>
+    </dependency>
+</dependencies>
+```
 
+![dependency gradle](https://img.shields.io/badge/DEPENDENCY-Gradle-02303A?style=plastic&logo=gradle)
+```groovy
+implementation 'ru.aslcraft.bell.oauth.discord:OAuth2Discord:1.0'
+```
 
 ## How does it work
 1. Instantiate the `OAuthBuilder` like this:
