@@ -6,6 +6,7 @@ Updated by ASL STUDIO
 [![GitHub license](https://img.shields.io/github/license/asl-std/OAuth2Discord?style=plastic)](https://github.com/asl-std/OAuth2Discord/blob/release/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/asl-std/OAuth2Discord?style=plastic)](https://github.com/asl-std/OAuth2Discord/issues)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/asl-std/OAuth2Discord/Build?style=plastic)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/asl-std/OAuth2Discord/Maven%20Central%20deploy?style=plastic)
 ![Maven Central](https://img.shields.io/maven-central/v/ru.aslcraft.bell.oauth.discord/OAuth2Discord?style=plastic)
 
 ## Features
