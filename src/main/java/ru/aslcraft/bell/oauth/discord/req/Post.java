@@ -1,4 +1,4 @@
-package bell.oauth.discord.req;
+package ru.aslcraft.bell.oauth.discord.req;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package bell.oauth.discord.main;
+package ru.aslcraft.bell.oauth.discord.main;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import bell.oauth.discord.domain.Connection;
-import bell.oauth.discord.domain.Guild;
-import bell.oauth.discord.domain.User;
-import bell.oauth.discord.req.Post;
+import ru.aslcraft.bell.oauth.discord.domain.Connection;
+import ru.aslcraft.bell.oauth.discord.domain.Guild;
+import ru.aslcraft.bell.oauth.discord.domain.User;
+import ru.aslcraft.bell.oauth.discord.req.Post;
 import okhttp3.OkHttpClient;
 
 public class OAuthBuilder {

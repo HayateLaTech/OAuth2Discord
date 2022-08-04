@@ -16,7 +16,7 @@ Updated by ASL STUDIO
 ## How does it work
 1. Instantiate the `OAuthBuilder` like this:
 ```
-import bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
 
 OAuthBuilder builder = new OAuthBuilder("clientID", "clientSecret")
         .setScopes(new String[]{"connections", "guilds", "email"})
@@ -24,14 +24,14 @@ OAuthBuilder builder = new OAuthBuilder("clientID", "clientSecret")
 ```
 2. Get the Authorization URL:
 ```
-import bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
 
 String authURL = builder.getAuthorizationUrl(null);
 ```
 3. Exchange the Code you get from the redirect (as a GET parameter):
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.main.Response;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.main.Response;
 
 Response response = builder.exchange(code);
 
@@ -43,31 +43,31 @@ Response response = builder.exchange(code);
 ```
 * Get User-Information (only available with scopes `email` or `identify`):
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.domain.User;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.domain.User;
 
 User user =  builder.getUser();
 ```
 * Get Guilds-Information (only available with scope `guilds`):
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.domain.Guild;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.domain.Guild;
 import java.util.List;
 
 List<Guild> guilds = builder.getGuilds();
 ```
 * Get Connections-Information (only available with scope `connections`):
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.domain.Connection;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.domain.Connection;
 import java.util.List;
 
 List<Connection> connections = builder.getConnections();
 ```
 * Refresh the access-token:
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.main.Response;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.main.Response;
 
 Response response = builder.refresh();
 
@@ -79,8 +79,8 @@ Response response = builder.refresh();
 ```
 * Revoke the access-token:
 ```
-import bell.oauth.discord.main.OAuthBuilder;
-import bell.oauth.discord.main.Response;
+import ru.aslcraft.bell.oauth.discord.main.OAuthBuilder;
+import ru.aslcraft.bell.oauth.discord.main.Response;
 
 Response response = builder.revoke();
 

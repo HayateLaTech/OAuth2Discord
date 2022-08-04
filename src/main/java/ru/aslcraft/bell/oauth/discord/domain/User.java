@@ -1,4 +1,4 @@
-package bell.oauth.discord.domain;
+package ru.aslcraft.bell.oauth.discord.domain;
 
 public class User {
 	
