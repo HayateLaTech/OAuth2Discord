@@ -1,3 +1,7 @@
+# Explorative and now Archived Software
+
+.. and its only purpose was for me to learn about Java. So keep that in mind!
+
 # OAuth2Discord
 A little OAuth2 Wrapper for [Discord](https://discordapp.com).
 
